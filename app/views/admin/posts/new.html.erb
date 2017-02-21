@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="large-12 columns">
+    <%= form_for ([:admin, @post]) do |f| %>
+      <%= f.text_field :title, placeholder: 'title' %>
+      <%= f.text_field :description, placeholder: 'Description' %>
+      <%= f.text_field :embed, placeholder: 'Embed' %>
+
+
+        <%= fields_for :categories do |category| %>
+          <%= category.collection_select(:category_id, Category.all, :id, :title) %>
+        <% end %>
+
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

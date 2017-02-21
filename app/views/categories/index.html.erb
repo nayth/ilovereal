@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="large-12 columns">
+
+    <% @categories.each do |category| %>
+      <div class="row" style="padding: 5px 0;">
+        <div class="large-12 columns">
+          <div class="categoryTitle">
+            <%= category.title %>:<br>
+          </div>
+        </div>
+
+
+
+          <% category.posts.limit(4).each do |post| %>
+            <div class="large-3 columns end">
+              <div class="video-container">
+                <div class="video-block">
+                  <div class="video-block-image">
+                    <%= image_tag post.description %>
+                  </div>
+
+                </div>
+
+                <div class="video-info-box">
+                  <span><%= post.title %></span>
+                </div>
+              </div>
+            </div>
+          <% end %>
+          <div class="large-12 columns text-right">
+            <span class="viewMore">view all videos for: </span><%= link_to category.title, category_path(category), class: 'categoryTitle-small' %>
+          </div>
+
+
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="row">
+
+
+  <% @posts.each do |post| %>
+    <div class="large-3 small-12 columns end">
+      <div class="video-container">
+        <div class="video-block">
+          <div class="video-block-image">
+            <%= link_to post_path(post) do %>
+              <%= image_tag post.description %>
+            <% end %>
+          </div>
+
+        </div>
+
+        <div class="video-info-box">
+          <span><%= link_to post.title, post_path(post) %></span>
+        </div>
+      </div>
+    </div>
+
+
+  <% end %>
+  <br>
+</div>
+
+<div class="row">
+  <div class="large-12 columns text-center">
+    <%= paginate @posts %>
+  </div>
+
+</div>

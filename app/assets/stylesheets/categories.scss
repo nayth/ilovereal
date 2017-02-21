@@ -1,0 +1,32 @@
+// Place all the styles related to the Categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.categoryTitle{
+  position: relative;
+
+  padding: 10px 0;
+  color: #707DA9 !important;
+
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+
+}
+
+.categoryTitle-small{
+  position: relative;
+
+  padding: 10px 0;
+  color: #707DA9 !important;
+
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.viewMore{
+  position: relative;
+
+  font-size: 17px;
+}

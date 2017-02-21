@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="large-12 columns text-center">
+    <h3>Admin Dashboard</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-6 columns text-center">
+    <div class="postsAdmin">
+      <span>Posts Information</span><br>
+      <span>You have: <%= @total_posts %> posts.</span><br>
+      <%= link_to 'create new post',  new_admin_post_path  %>
+    </div>
+  </div>
+
+  <div class="large-6 columns text-center">
+    <div class="postsAdmin">
+      <span>Category Information</span><br>
+      <span>You have: <%= @categories_total %> category.</span><br>
+      <%= link_to 'create new post',   new_admin_category_path  %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12 columns">
+  </div>
+
+  <div class="large-12 columns">
+    <h5>Current Posts: </h5>
+    <%= render('admin/posts/posts') %>
+  </div>
+</div>

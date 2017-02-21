@@ -1,0 +1,133 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.video-continer{
+  position: relative;
+
+  margin-top: 10px;
+}
+
+.video-block{
+  position: relative;
+
+  height: 200px;
+  width: 100%;
+
+
+}
+
+.video-block-image{
+  position: relative;
+  height: 100%;
+
+}
+
+.video-block-image img{
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+.video-info-box{
+  position: relative;
+
+  margin-top: 5px;
+
+  min-height: 50px;
+  line-height: 1.2;
+
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.video-info-box span{
+  color: #707DA9;
+}
+
+
+// Show page.
+
+.show-video-wrapper{
+  position: relative;
+
+  width: 100%;
+  min-height: 450px;
+
+  border: 2px solid #fff;
+  border-radius: 4px;
+
+  margin-bottom: 10px;
+}
+
+.show-video-wrapper .player{
+  position: relative;
+
+  height: 450px;
+}
+
+.show-video-wrapper .video-title{
+  position: relative;
+
+  background-color: #fff;
+  padding: 10px;
+}
+
+.show-video-wrapper .video-title .title{
+  font-size: 14pt;
+  margin: 0 !important;
+}
+
+.show-video-wrapper .video-information{
+  padding: 10px;
+}
+
+.show-video-wrapper .video-information .information{
+  position: relative;
+  margin: 0 !important;
+  font-size: 10pt;
+}
+
+
+/* ADS CONTAINER */
+
+.video-ad-container{
+  position: relative;
+
+  width: 100%;
+  height: 140px;
+
+  margin-bottom: 10px;
+
+  background-color: rgb(18, 237, 180);
+}
+
+/* Related VIDEOS */
+
+.related-videos-wrapper{
+  position: relative;
+
+  width: 100%;
+  min-height: 250px;
+
+  border: 2px solid #fff;
+  border-radius: 4px;
+
+  margin-bottom: 10px;
+}
+
+
+.related-videos-wrapper .related-title{
+  position: relative;
+
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.related-videos-wrapper .related-title .title{
+  font-size: 14pt;
+  margin: 0 !important;
+}

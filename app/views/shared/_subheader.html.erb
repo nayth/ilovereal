@@ -1,0 +1,20 @@
+<div class="subHeader">
+  <div class="row">
+    <div class="large-12 columns text-center">
+      <nav class="subNav">
+        <% if user_signed_in? && current_user.admin? %>
+          <%= link_to 'admin', admin_path %>
+          <%= link_to 'tumblr', 'ilovereal.tumblr.com' %>
+          <%= link_to 'submit to us', 'ilovereal.tumblr.com/submit' %>
+          <%= link_to 'signout', destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to 'home', root_path %>
+          <%= link_to 'categories', categories_path %>
+          <%= link_to 'tumblr', 'ilovereal.tumblr.com' %>
+          <%= link_to 'submit to us', 'ilovereal.tumblr.com/submit' %>
+
+        <% end %>
+      </nav>
+    </div>
+  </div>
+</div>

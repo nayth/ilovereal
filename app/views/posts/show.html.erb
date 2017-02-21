@@ -1,0 +1,82 @@
+<div class="row">
+  <div class="small-12 columns">
+    <div class="video-ad-container">
+      <span>This is an ad</span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 columns">
+    <div class="show-video-wrapper">
+      <div class="player">
+        <%= content_tag(:iframe, '', width: '100%', height: '100%', frameborder: '0', scrolling: 'no', src: @post.embed) %>
+      </div>
+
+      <div class="video-title">
+        <h1 class="title">
+          <span><%= @post.title %></span>
+        </h1>
+      </div>
+
+      <div class="video-information">
+        <h1 class="information">
+          <span>More video information and ratings coming soon.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 columns">
+    <div class="video-ad-container">
+      <span>This is an ad</span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 columns">
+    <div class="related-videos-wrapper">
+      <div class="related-title text-center">
+        <h1 class="title">
+          <span>More Videos.</span>
+        </h1>
+      </div>
+
+      <div class="related-videos">
+        <div class="row">
+          <div class="large-12 columns">
+            <% @more_videos.each do |post| %>
+              <div class="large-3 small-12 columns end">
+                <div class="video-container">
+                  <div class="video-block">
+                    <div class="video-block-image">
+                      <%= link_to post_path(post) do %>
+                        <%= image_tag post.description %>
+                      <% end %>
+                    </div>
+
+                  </div>
+
+                  <div class="video-info-box">
+                    <span><%= link_to post.title, post_path(post) %></span>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-12 columns">
+    <div class="video-ad-container">
+      <span>This is an ad</span>
+    </div>
+  </div>
+</div>

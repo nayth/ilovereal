@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="large-12 columns">
+    <%= form_for([:admin, @category]) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
