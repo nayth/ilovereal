@@ -1,6 +1,16 @@
 require 'rest-client'
 
 class Post < ApplicationRecord
+
+  extend FriendlyId
+
+    friendly_id :title, :use => [ :slugged ]
+
+    def should_generate_new_friendly_id?
+      slug.blank? || title_changed?
+    end
+
+
   # Relationships
   has_many :post_categories
   has_many :categories, through: :post_categories
@@ -27,6 +37,8 @@ class Post < ApplicationRecord
       embed_iframe = embed = page.css('div#tabEmbed input')[0].attributes['value'].text
 
       embed = embed.match('(?<=src=").*?(?=[\?"])')
+
+
 
     end
     self.description = image

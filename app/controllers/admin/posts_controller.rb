@@ -17,7 +17,7 @@ class Admin::PostsController < ApplicationController
 		@post = Post.create post_params
 		@category = params[:categories][:category_id]
 		@post.post_categories.create(category_id: @category)
-		@post.embed_info(params[:post][:title])
+		@post.embed_info(params[:post][:embed])
 
 		if @post.save
 			redirect_to admin_posts_url, notice: 'post created'

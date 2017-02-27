@@ -52,3 +52,4 @@ gem 'rest-client', '~> 1.8'
 gem 'nokogiri'
 gem "foundation-rails", "6.3.0.0"
 gem 'kaminari'
+gem 'friendly_id', '~> 5.1.0'
